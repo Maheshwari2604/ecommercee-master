@@ -119,7 +119,7 @@
                                 <li><a href="women.html">Vegetables</a></li>
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="contact.html">Contact-Vendor</a></li>
-                                <li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
+                                <li class="cart"><a href="{% url 'view' %}"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
                             </ul>
                         </div>
                     </div>
@@ -211,7 +211,11 @@
             </div>
         </aside>
         -->
-        <div class="colorlib-intro">
+        {% block cart %} {% endblock %}
+        
+
+        {% block line %} {% endblock %}
+        <!--<div class="colorlib-intro">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 text-center">
@@ -220,7 +224,7 @@
                 </div>
             </div>
         </div>
-
+        -->
         {% block body %} {% endblock %}
 
 
